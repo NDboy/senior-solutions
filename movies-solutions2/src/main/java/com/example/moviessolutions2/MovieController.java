@@ -17,10 +17,10 @@ public class MovieController {
         this.movieService = movieService;
     }
 
-    @GetMapping
-    public List<MovieDto> getMovies() {
-        return movieService.listMovies();
-    }
+//    @GetMapping
+//    public List<MovieDto> getMovies() {
+//        return movieService.listMovies();
+//    }
 
     @GetMapping("/{id}")
     public MovieDto findMovieById(@PathVariable("id") long id) {
@@ -32,10 +32,10 @@ public class MovieController {
 //        return employeesService.listEmployees(prefix);
 //    }
 
-//    @GetMapping
-//    public List<MovieDto> getMovies2(@RequestParam Optional<String> partOfTitle) {
-//        return movieService.listMoviesByTitle(partOfTitle);
-//    }
+    @GetMapping
+    public List<MovieDto> getMovies2(@RequestParam Optional<String> partOfTitle) {
+        return movieService.listMoviesByTitle(partOfTitle);
+    }
 
     @PostMapping
     public MovieDto createMovie(@RequestBody CreateMovieCommand command) {
