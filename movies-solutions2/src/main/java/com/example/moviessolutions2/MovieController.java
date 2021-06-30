@@ -33,7 +33,7 @@ public class MovieController {
 //    }
 
     @GetMapping
-    public List<MovieDto> getMovies2(@RequestParam Optional<String> partOfTitle) {
+    public List<MovieDto> getMovies2(@RequestParam (required = false) Optional<String> partOfTitle) {
         return movieService.listMoviesByTitle(partOfTitle);
     }
 
