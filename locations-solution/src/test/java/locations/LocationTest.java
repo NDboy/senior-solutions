@@ -1,6 +1,12 @@
 package locations;
 
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -64,6 +70,21 @@ class LocationTest {
         assertFalse(locationParser.isOnPrimeMeridian(notOnMeridianLocation));
     }
 
+    @ParameterizedTest(name = "Is on prime meridian? {0} ---->  {1}")
+    @MethodSource("createLocations")
+    void testIsOnPrimeMeridianParam(Location location, boolean expectedValue) {
+
+        assertEquals(expectedValue, locationParser.isOnPrimeMeridian(location));
+    }
+
+    static Stream<Arguments> createLocations() {
+        return Stream.of(
+                Arguments.arguments(new Location("OnMeridian", 47.497912, 0.0), true),
+                Arguments.arguments(new Location("NotOnMeridian", 0.0212, 38.326545), false),
+                Arguments.arguments(new Location("OtherOnMeridian", 33.117912, 0.0), true)
+        );
+    }
+
     @Test
     void testNewInstance() {
         assertNotSame(locationParser.parse("Budapest,47.497912,19.040235"), locationParser.parse("Budapest,47.497912,19.040235"));
@@ -83,6 +104,15 @@ class LocationTest {
         assertEquals(195, (int)(budapestLocation.distanceFrom(debrecenLocation)));
         assertEquals(165, (int)(budapestLocation.distanceFrom(szegedLocation)));
         assertEquals(186, (int)(debrecenLocation.distanceFrom(szegedLocation)));
+    }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/locations.csv")
+    void testDistanceFromWithParam(double firstLat, double firstLon, int firstAlt, double secondLat, double secondLon, int secondAlt, int distance) {
+        Location firstLocation = new Location("FirstLocation", firstLat, firstLon, firstAlt);
+        Location secondLocation = new Location("SecondLocation", secondLat, secondLon, secondAlt);
+
+        assertEquals(distance, (int)(firstLocation.distanceFrom(secondLocation)));
     }
 
     @Test
