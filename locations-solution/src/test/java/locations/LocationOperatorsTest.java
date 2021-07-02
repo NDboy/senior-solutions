@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@LocationOperationsFeatureTest
 class LocationOperatorsTest {
 
     private List<Location> locations;
