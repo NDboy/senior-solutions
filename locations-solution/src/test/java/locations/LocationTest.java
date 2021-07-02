@@ -44,6 +44,7 @@ class LocationTest {
     }
 
 
+
 //    Teszteld az isOnEquator() metódust! Vegyél fel egy tömbbe pár Location objektumot,
 //    ezek egy része az egyenlítőn legyen! Tömbök tömbjét használj,
 //    azaz vegyél fel egy boolean értéket is,

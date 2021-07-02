@@ -19,6 +19,7 @@ public class DistanceService {
         return Optional.empty();
     }
 
+
 }
 
 //    Hozz létre egy LocationRepository interfészt,

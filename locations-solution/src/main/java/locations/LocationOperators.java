@@ -11,5 +11,4 @@ public class LocationOperators {
                 .collect(Collectors.toList());
     }
 
-
 }

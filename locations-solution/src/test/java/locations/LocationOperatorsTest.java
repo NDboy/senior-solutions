@@ -36,4 +36,5 @@ class LocationOperatorsTest {
         List<Location> locationsOnNorth = locationOperators.filterOnNorth(locations);
         assertEquals(List.of("Budapest", "Debrecen", "Szeged"), locationsOnNorth.stream().map(Location::getName).collect(Collectors.toList()));
     }
+
 }

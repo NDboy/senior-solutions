@@ -102,7 +102,6 @@ public class Location {
     }
 }
 
-
 //    A locations csomagba dolgozz!
 //
 //        Hozz létre egy Location osztályt, name, lat, lon attribútumokkal! A name attribútum String típusú legyen!

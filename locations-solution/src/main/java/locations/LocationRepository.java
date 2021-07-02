@@ -23,6 +23,7 @@ public interface LocationRepository {
                 .findFirst();
     }
 
+
 }
 
 

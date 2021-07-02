@@ -41,4 +41,5 @@ class MockitoDistanceServiceTest {
         assertEquals(Optional.empty(), distanceService.calculateDistance("lkj", "lkj"));
 
     }
+
 }

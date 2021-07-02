@@ -17,7 +17,6 @@ public class LocationParser {
         return location.getLon() == 0.0;
     }
 
-
 }
 
 //    A locations csomagba dolgozz!
