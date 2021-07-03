@@ -81,6 +81,10 @@ public class Location {
         this.lon = lon;
     }
 
+    public double getAlt() {
+        return alt;
+    }
+
     @Override
     public String toString() {
         return name +

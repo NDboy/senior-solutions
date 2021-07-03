@@ -17,7 +17,7 @@ Kérlek jelöld be, hogy melyik gyakorlati feladatokat oldottad meg!
 * [ ] JUnit 4 és 5 használata
 * [x] Hamcrest
 * [ ] Saját Hamcrest matcher implementálása
-* [ ] AssertJ
+* [x] AssertJ
 * [ ] AssertJ kiterjeszthetőség
 * [x] Mockito
 * [ ] Teszt lefedettség

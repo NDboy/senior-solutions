@@ -14,7 +14,6 @@ public class LocationServiceTestWithHamcrest {
         LocationService ls = new LocationService();
         List<Location> favoriteLocations = ls.loadLocations("favoritelocations.csv");
 
-        System.out.println(favoriteLocations);
         assertThat(favoriteLocations, contains(
                 hasProperty("name", equalTo("Budapest")),
                 hasProperty("lat", equalTo(46.325123)),
