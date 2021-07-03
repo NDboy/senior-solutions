@@ -12,7 +12,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.tuple;
 
 @ExtendWith(SoftAssertionsExtension.class)
-public class LocationServiceTestWithAssertJ {
+public class LocationServiceWithAssertJTest {
 
     private LocationService ls;
 
@@ -63,11 +63,6 @@ public class LocationServiceTestWithAssertJ {
         softly.assertThat(favoriteLocations)
                 .extracting(Location::getName, Location::getLat)
                 .contains(tuple("Pécs", 46.325123));
-
-        softly.assertThat(favoriteLocations)
-                .extracting(Location::getName, Location::getLat)
-                .contains(tuple("Pécs!!!!!!!!!!", 46.325123));
-
 
     }
 }
