@@ -11,6 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.util.Arrays;
 
 
+import static org.assertj.core.api.Assertions.tuple;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -27,11 +28,15 @@ class LocationControllerTest {
     @Test
     void testGetLocations() {
         when(locationService.getLocations()).thenReturn(Arrays.asList(
-                new Location(1L, "TestCase1", -35.12144, -78.121244),
-                new Location(2L, "TestCase2", -39.12188, -32.98756)
+                new LocationDto(1L, "TestCase1", -35.12144, -78.121244),
+                new LocationDto(2L, "TestCase2", -39.12188, -32.98756)
         ));
 
-        assertThat(locationController.getLocations()).isEqualTo("Location(id=1, name=TestCase1, lat=-35.12144, lon=-78.121244), Location(id=2, name=TestCase2, lat=-39.12188, lon=-32.98756)");
+        assertThat(locationController.getLocations())
+                .hasSize(2)
+                .extracting("name", "lat")
+                .contains(tuple("TestCase1", -35.12144));
+
         verify(locationService).getLocations();
 
     }

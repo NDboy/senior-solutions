@@ -1,5 +1,6 @@
 package locations;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -11,9 +12,10 @@ public class LocationsSpringSolutionsApplication {
         SpringApplication.run(LocationsSpringSolutionsApplication.class, args);
     }
 
-//    @Bean
-//    public LocationService locationService() {
-//        return new LocationService();
-//    }
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
+
 
 }
