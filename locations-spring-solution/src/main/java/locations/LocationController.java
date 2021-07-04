@@ -28,6 +28,11 @@ public class LocationController {
         return locationService.findLocationById(id);
     }
 
+    @PostMapping
+    public LocationDto createLocation(@RequestBody CreateLocationCommand command) {
+        return locationService.createLocation(command);
+    }
+
 }
 
 

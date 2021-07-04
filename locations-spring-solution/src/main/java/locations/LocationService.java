@@ -3,6 +3,7 @@ package locations;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -15,12 +16,12 @@ public class LocationService {
 
     private ModelMapper modelMapper;
 
-    private List<Location> locations = Arrays.asList(
-            new Location(atomicLong.incrementAndGet(), "Buenos Aires", -35.12144, -78.121244),
-            new Location(atomicLong.incrementAndGet(), "Brasil", -39.12188, -32.98756)
-    );
+    private List<Location> locations = new ArrayList<>();
+
 
     public LocationService(ModelMapper modelMapper) {
+        locations.add(new Location(atomicLong.incrementAndGet(), "Buenos Aires", -35.12144, -78.121244));
+        locations.add(new Location(atomicLong.incrementAndGet(), "Brasil", -39.12188, -32.98756));
         this.modelMapper = modelMapper;
     }
 
@@ -47,6 +48,11 @@ public class LocationService {
                 .toList();
     }
 
+    public LocationDto createLocation(CreateLocationCommand command) {
+        Location location = new Location(atomicLong.incrementAndGet(), command.getName(), command.getLat(), command.getLon());
+        locations.add(location);
+        return modelMapper.map(location, LocationDto.class);
+    }
 }
 //    Lehessen megadni, hogy szűrni lehessen a kedvenc hely nevére!
 //
