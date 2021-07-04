@@ -53,6 +53,26 @@ public class LocationService {
         locations.add(location);
         return modelMapper.map(location, LocationDto.class);
     }
+
+    public LocationDto updateLocation(long id, UpdateLocationCommand command) {
+        Location location = locations.stream()
+                .filter(l -> l.getId() == id)
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Location not found!"));
+        location.setName(command.getName());
+        location.setLat(command.getLat());
+        location.setLon(command.getLon());
+        return modelMapper.map(location, LocationDto.class);
+
+    }
+
+    public void deleteLocation(long id) {
+        Location location = locations.stream()
+                .filter(l -> l.getId() == id)
+                .findFirst()
+                .orElseThrow(() -> new IllegalArgumentException("Location not found!"));
+        locations.remove(location);
+    }
 }
 //    Lehessen megadni, hogy szűrni lehessen a kedvenc hely nevére!
 //

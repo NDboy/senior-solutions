@@ -1,0 +1,489 @@
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T004702.200.json
+
+###
+
+DELETE http://localhost:8080/api/locations/1
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T004553.200.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T004150.200.json
+
+###
+
+PUT http://localhost:8080/api/locations/3
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota by bus",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-05T004145.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-05T004040.200.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T004036.200.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T002845.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-05T002842.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-05T002839.200.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T002836.200.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T002747.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-05T002742.200.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T002737.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-05T002415.500.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T002412.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-05T002237.500.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T002233.200.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T002018.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-05T002011.500.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T002007.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-05T001940.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+<> 2021-07-05T001848.200.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T001844.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+<> 2021-07-05T001749.500.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+<> 2021-07-05T001746.500.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T001743.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+<> 2021-07-05T001605.500.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T001600.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+<> 2021-07-05T001324.500.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T001321.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+<> 2021-07-05T001016.500.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T001011.200.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T000833.200.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+<> 2021-07-05T000421.500.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": -15.12144,
+  "lon": -28.121244
+}
+
+<> 2021-07-05T000346.500.json
+
+###
+
+GET http://localhost:8080/api/locations
+Accept: application/json
+
+<> 2021-07-05T000211.200.json
+
+###
+
+GET http://localhost:8080/api/movies?partOfTitle=4
+Accept: application/json
+
+<> 2021-06-30T105210.200.json
+
+###
+
+GET http://localhost:8080/api/movies?partOfTitle=3
+Accept: application/json
+
+<> 2021-06-30T105200.200.json
+
+###
+
+GET http://localhost:8080/api/movies/
+Accept: application/json
+
+<> 2021-06-30T104745.200.json
+
+###
+
+POST http://localhost:8080/api/movies/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Titanic 4",
+  "length": 99
+}
+
+<> 2021-06-30T104741.200.json
+
+###
+
+GET http://localhost:8080/api/movies/
+Accept: application/json
+
+<> 2021-06-30T104733.200.json
+
+###
+
+POST http://localhost:8080/api/movies/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Titanic 3",
+  "length": 99
+}
+
+<> 2021-06-30T104729.200.json
+
+###
+
+POST http://localhost:8080/api/movies/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Titanic 3",
+  "length": 99
+}
+
+<> 2021-06-30T104725.200.json
+
+###
+
+GET http://localhost:8080/api/movies
+Accept: application/json
+
+<> 2021-06-29T182554.200.json
+
+###
+
+DELETE http://localhost:8080/api/movies/2
+
+###
+
+DELETE http://localhost:8080/api/movies/1
+
+<> 2021-06-29T182545.500.json
+
+###
+
+DELETE http://localhost:8080/api/movies/0
+
+<> 2021-06-29T182540.500.json
+
+###
+
