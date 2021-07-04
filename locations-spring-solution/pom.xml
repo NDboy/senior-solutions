@@ -11,7 +11,7 @@
     <groupId>com.training360</groupId>
     <artifactId>locations-spring-solution</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>locations-spring-solutions</name>
+    <name>locations-spring-solution</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>16</java.version>
