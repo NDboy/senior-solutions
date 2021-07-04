@@ -1,12 +1,10 @@
 package locations;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
@@ -21,8 +19,13 @@ public class LocationController {
     }
 
     @GetMapping
-    public List<LocationDto> getLocations() {
-        return locationService.getLocations();
+    public List<LocationDto> getLocations(@RequestParam Optional<String> namePart, @RequestParam Optional<Double> minLat, @RequestParam Optional<Double> minLon) {
+        return locationService.findLocationByNameOrMinLatOrMinLon(namePart, minLat, minLon);
+    }
+
+    @GetMapping("/{id}")
+    public LocationDto findLocationById(@PathVariable("id") long id) {
+        return locationService.findLocationById(id);
     }
 
 }
@@ -36,4 +39,14 @@ public class LocationController {
 //
 //        Ennek megfelelően változtasd a unit és integrációs teszteket,
 //        ha arra szükség van!
+
+//    Lehessen megadni, hogy szűrni lehessen a kedvenc hely nevére!
+//
+//        Opcionális feladat: Megadhatsz további paramétereket is,
+//        pl. minLat, minLon, maxLat és maxLon.
+//        Ezekkel korlátokat tudsz megadni a kedvenc hely koordinátáira.
+//
+//        Lehessen lekérni kedvenc helyeket id alapján is!
+//
+//        Id generálására használj AtomicLong osztályt, szűrésre Java 8 streameket!
 
