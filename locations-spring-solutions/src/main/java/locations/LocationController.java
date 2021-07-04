@@ -12,16 +12,15 @@ import java.util.stream.Collectors;
 @RestController
 public class LocationController {
 
-    private AtomicLong atomicLong = new AtomicLong();
+    LocationService locationService;
 
-    private List<Location> locations = Arrays.asList(
-            new Location(atomicLong.incrementAndGet(), "Buenos Aires", -35.12144, -78.121244),
-            new Location(atomicLong.incrementAndGet(), "Brasil", -39.12188, -32.98756)
-    );
+    public LocationController(LocationService locationService) {
+        this.locationService = locationService;
+    }
 
     @GetMapping("/locations")
     public String getLocations() {
-        return locations
+        return locationService.getLocations()
                 .stream()
                 .map(Location::toString)
                 .collect(Collectors.joining(", "));
