@@ -11,9 +11,9 @@ public class LocationsSpringSolutionsApplication {
         SpringApplication.run(LocationsSpringSolutionsApplication.class, args);
     }
 
-    @Bean
-    public LocationService locationService() {
-        return new LocationService();
-    }
+//    @Bean
+//    public LocationService locationService() {
+//        return new LocationService();
+//    }
 
 }

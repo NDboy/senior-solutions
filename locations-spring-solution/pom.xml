@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.training360</groupId>
-    <artifactId>locations-spring-solutions</artifactId>
+    <artifactId>locations-spring-solution</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>locations-spring-solutions</name>
     <description>Demo project for Spring Boot</description>

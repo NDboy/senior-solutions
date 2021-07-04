@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
-//@Service
+@Service
 public class LocationService {
 
     private AtomicLong atomicLong = new AtomicLong();
