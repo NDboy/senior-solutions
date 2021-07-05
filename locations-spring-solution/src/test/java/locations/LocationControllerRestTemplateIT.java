@@ -1,12 +1,18 @@
 package locations;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
+import org.zalando.problem.Problem;
+import org.zalando.problem.Status;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -66,5 +72,31 @@ public class LocationControllerRestTemplateIT {
                 .containsOnly(tuple("Brasil", -39.12188));
     }
 
+    @Test
+    void createLocationWithInvalidName() {
+        Problem result = testRestTemplate.postForObject("/api/locations",
+                new CreateLocationCommand("", 47.023, 74.221),
+                Problem.class);
 
+        assertEquals(Status.BAD_REQUEST, result.getStatus());
+
+    }
+
+    @Test
+    void createLocationWithInvalidLat() {
+        Problem result = testRestTemplate.postForObject("/api/locations",
+                new CreateLocationCommand("NotOnEarth", -147.023, 74.221),
+                Problem.class);
+        assertEquals(Status.BAD_REQUEST, result.getStatus());
+
+    }
+
+    @Test
+    void createLocationWithInvalidLon() {
+        Problem result = testRestTemplate.postForObject("/api/locations",
+                new CreateLocationCommand("NotOnEarth", -47.023, 274.221),
+                Problem.class);
+        assertEquals(Status.BAD_REQUEST, result.getStatus());
+
+    }
 }

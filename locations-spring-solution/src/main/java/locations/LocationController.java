@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.zalando.problem.Problem;
 import org.zalando.problem.Status;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
@@ -36,12 +37,12 @@ public class LocationController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public LocationDto createLocation(@RequestBody CreateLocationCommand command) {
+    public LocationDto createLocation(@Valid @RequestBody CreateLocationCommand command) {
         return locationService.createLocation(command);
     }
 
     @PutMapping("/{id}")
-    public LocationDto updateLocation(@PathVariable("id") long id, @RequestBody UpdateLocationCommand command) {
+    public LocationDto updateLocation(@PathVariable("id") long id, @Valid @RequestBody UpdateLocationCommand command) {
         return locationService.updateLocation(id, command);
     }
 
@@ -65,6 +66,10 @@ public class LocationController {
                 .contentType(MediaType.APPLICATION_PROBLEM_JSON)
                 .body(problem);
 
+    }
+
+    public void deleteAllLocations() {
+        locationService.deleteAllLocations();
     }
 
 

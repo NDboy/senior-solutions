@@ -1,6 +1,8 @@
 package locations;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,6 +12,8 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Service
+//@Scope(value="prototype", proxyMode= ScopedProxyMode.TARGET_CLASS)
+
 public class LocationService {
 
     private AtomicLong atomicLong = new AtomicLong();
@@ -20,8 +24,8 @@ public class LocationService {
 
 
     public LocationService(ModelMapper modelMapper) {
-        locations.add(new Location(atomicLong.incrementAndGet(), "Buenos Aires", -35.12144, -78.121244));
-        locations.add(new Location(atomicLong.incrementAndGet(), "Brasil", -39.12188, -32.98756));
+//        locations.add(new Location(atomicLong.incrementAndGet(), "Buenos Aires", -35.12144, -78.121244));
+//        locations.add(new Location(atomicLong.incrementAndGet(), "Brasil", -39.12188, -32.98756));
         this.modelMapper = modelMapper;
     }
 
@@ -72,6 +76,11 @@ public class LocationService {
                 .findFirst()
                 .orElseThrow(() -> new LocationNotFoundException("Location not found!"));
         locations.remove(location);
+    }
+
+    public void deleteAllLocations() {
+        atomicLong = new AtomicLong();
+        locations.clear();
     }
 }
 //    Lehessen megadni, hogy szűrni lehessen a kedvenc hely nevére!
