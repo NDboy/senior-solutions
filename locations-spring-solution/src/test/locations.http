@@ -29,4 +29,4 @@ Accept: application/json
 
 ###
 
-DELETE http://localhost:8080/api/locations/1
+DELETE http://localhost:8080/api/locations/3

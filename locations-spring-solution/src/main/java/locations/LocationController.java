@@ -1,7 +1,13 @@
 package locations;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.zalando.problem.Problem;
+import org.zalando.problem.Status;
 
+import java.net.URI;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -29,6 +35,7 @@ public class LocationController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public LocationDto createLocation(@RequestBody CreateLocationCommand command) {
         return locationService.createLocation(command);
     }
@@ -39,11 +46,39 @@ public class LocationController {
     }
 
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteLocation(@PathVariable("id") long id) {
         locationService.deleteLocation(id);
     }
 
+    @ExceptionHandler(LocationNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<Problem> handleNotFoundException(LocationNotFoundException lnfe){
+        Problem problem = Problem.builder()
+                .withType(URI.create("locations/not-found-by-me"))
+                .withTitle("Not found by me!")
+                .withStatus(Status.NOT_FOUND)
+                .withDetail(lnfe.getMessage())
+                .build();
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .contentType(MediaType.APPLICATION_PROBLEM_JSON)
+                .body(problem);
+
+    }
+
+
 }
+
+
+//    Módosítsd az alkalmazásod, hogy létrehozáskor 201-es státuszkóddal,
+//    törléskor 204-es státuszkóddal térjen vissza!
+//
+//        Módosítsd az alkalmazásod,
+//        hogy az RFC szabványnak megfelelő JSON legyen az üzenet törzsében!
+//
+//        Módosítsd, hogy nem található kedvenc hely esetén
+//        404-es státuszkód jöjjön vissza! Használj saját kivételt, pl. LocationNotFoundException!
 
 
 //A LocationsController legyen @RestController,

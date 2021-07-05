@@ -35,7 +35,7 @@ public class LocationService {
         Location foundLocation = locations.stream()
                 .filter(l -> l.getId() == id)
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("Location not found!"));
+                .orElseThrow(() -> new LocationNotFoundException("Location not found!"));
         return modelMapper.map(foundLocation, LocationDto.class);
     }
 
@@ -58,7 +58,7 @@ public class LocationService {
         Location location = locations.stream()
                 .filter(l -> l.getId() == id)
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("Location not found!"));
+                .orElseThrow(() -> new LocationNotFoundException("Location not found!"));
         location.setName(command.getName());
         location.setLat(command.getLat());
         location.setLon(command.getLon());
@@ -70,7 +70,7 @@ public class LocationService {
         Location location = locations.stream()
                 .filter(l -> l.getId() == id)
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("Location not found!"));
+                .orElseThrow(() -> new LocationNotFoundException("Location not found!"));
         locations.remove(location);
     }
 }
