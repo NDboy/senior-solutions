@@ -11,7 +11,7 @@ public class Activity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @Column(name = "start_time")
     private LocalDateTime startTime;
 
     @Column(name = "act_desc")
@@ -64,5 +64,21 @@ public class Activity {
 
     public void setType(ActivityType type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Activity{" +
+                "id=" + id +
+                ", startTime=" + startTime +
+                ", descr='" + descr + '\'' +
+                ", type=" + type +
+                '}';
+    }
+
+    public static Activity creator(int num) {
+        return new Activity(LocalDateTime.of(2020, 10,10,10,10).plusDays(num),
+                "This was my " + num + ". activity.",
+                ActivityType.RUNNING);
     }
 }
