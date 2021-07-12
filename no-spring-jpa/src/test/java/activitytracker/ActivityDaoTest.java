@@ -49,24 +49,22 @@ class ActivityDaoTest {
                 .mapToObj(Activity::creator)
                 .forEach(activities::add);
 
-        activitySingle = new Activity(LocalDateTime.now(), "single activity", ActivityType.HIKING);
+        activitySingle = new Activity(LocalDateTime.of(2020,10, 10, 10, 10), "single activity", ActivityType.HIKING);
     }
 
     @Test
     void testSaveAndFindActivity() {
-        activities.forEach(activityDao::saveActivity);
-        Activity activity = activityDao.findActivityById(1L);
-        Activity activity4 = activityDao.findActivityById(4L);
+        activityDao.saveActivity(activitySingle);
+        Long id = activitySingle.getId();
+        Activity foundActivity = activityDao.findActivityById(id);
 
-        assertThat(activity)
-                .hasToString("Activity{id=1, startTime=2020-10-10T10:10, descr='This was my 0. activity.', type=RUNNING}");
+        assertThat(foundActivity)
+                .hasToString("Activity{id=1, startTime=2020-10-10T10:10, descr='single activity', type=HIKING}");
 
-        assertThat(activity4)
-                .hasToString("Activity{id=4, startTime=2020-10-13T10:10, descr='This was my 3. activity.', type=RUNNING}");
 
-        assertThat(List.of(activity))
+        assertThat(List.of(foundActivity))
                 .extracting("id", "startTime", "descr", "type")
-                .contains(tuple(1L, LocalDateTime.of(2020,10, 10, 10, 10), "This was my 0. activity.", ActivityType.RUNNING));
+                .contains(tuple(1L, LocalDateTime.of(2020,10, 10, 10, 10), "single activity", ActivityType.HIKING));
 
     }
 
