@@ -83,4 +83,25 @@ class ActivityDaoTest {
 
 
     }
+
+    @Test
+    void testSetDataById() {
+        activityDao.saveActivity(activitySingle);
+        long id = activitySingle.getId();
+        activityDao.setDataById(id, a -> a.setDescr("!!!fake activity!!!"));
+        assertEquals("!!!fake activity!!!", activityDao.findActivityById(id).getDescr());
+    }
+
+    @Test
+    void testDeleteActivityById() {
+        activities.forEach(activityDao::saveActivity);
+        activityDao.deleteActivityById(1);
+
+        List<Activity> leftActivities = activityDao.listActivities();
+        assertThat(leftActivities)
+                .hasSize(9)
+                .extracting("id")
+                .contains(2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L)
+                .doesNotContain(1L);
+    }
 }

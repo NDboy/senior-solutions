@@ -54,7 +54,7 @@ public class Activity {
         return descr;
     }
 
-    public void setDesc(String descr) {
+    public void setDescr(String descr) {
         this.descr = descr;
     }
 

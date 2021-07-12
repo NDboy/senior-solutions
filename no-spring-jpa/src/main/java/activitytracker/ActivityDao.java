@@ -5,6 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ActivityDao {
 
@@ -28,27 +29,36 @@ public class ActivityDao {
 
     public Activity findActivityById(Long id) {
         EntityManager manager = entityManagerFactory.createEntityManager();
-//        EntityTransaction transaction = manager.getTransaction();
-//        transaction.begin();
 
         Activity activity = manager.find(Activity.class, id);
-
-//        transaction.commit();
-        manager.close();
 
         return activity;
     }
 
     public List<Activity> listActivities() {
         EntityManager manager = entityManagerFactory.createEntityManager();
-        EntityTransaction transaction = manager.getTransaction();
-        transaction.begin();
 
-        List<Activity> activities = manager.createQuery("select a from Activity a", Activity.class).getResultList();
-
-        transaction.commit();
-        manager.close();
+        List<Activity> activities = manager.createQuery("select a from Activity a order by a.descr", Activity.class).getResultList();
 
         return activities;
+    }
+
+    public void setDataById(long id, Consumer<Activity> consumer) {
+        EntityManager em = entityManagerFactory.createEntityManager();
+        em.getTransaction().begin();
+        Activity activity = em.find(Activity.class, id);
+        consumer.accept(activity);
+        em.getTransaction().commit();
+        em.close();
+    }
+
+    public void deleteActivityById(long id) {
+        EntityManager em = entityManagerFactory.createEntityManager();
+        em.getTransaction().begin();
+        Activity activity = em.find(Activity.class, id);
+//        Activity activity = em.getReference(Activity.class, id);
+        em.remove(activity);
+        em.getTransaction().commit();
+        em.close();
     }
 }
