@@ -31,6 +31,7 @@ public class ActivityDao {
         EntityManager manager = entityManagerFactory.createEntityManager();
 
         Activity activity = manager.find(Activity.class, id);
+        manager.close();
 
         return activity;
     }
@@ -39,6 +40,7 @@ public class ActivityDao {
         EntityManager manager = entityManagerFactory.createEntityManager();
 
         List<Activity> activities = manager.createQuery("select a from Activity a order by a.descr", Activity.class).getResultList();
+        manager.close();
 
         return activities;
     }
@@ -55,8 +57,8 @@ public class ActivityDao {
     public void deleteActivityById(long id) {
         EntityManager em = entityManagerFactory.createEntityManager();
         em.getTransaction().begin();
-        Activity activity = em.find(Activity.class, id);
-//        Activity activity = em.getReference(Activity.class, id);
+//        Activity activity = em.find(Activity.class, id);
+        Activity activity = em.getReference(Activity.class, id);
         em.remove(activity);
         em.getTransaction().commit();
         em.close();

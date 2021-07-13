@@ -87,9 +87,13 @@ class ActivityDaoTest {
     @Test
     void testSetDataById() {
         activityDao.saveActivity(activitySingle);
-        long id = activitySingle.getId();
+        Long id = activitySingle.getId();
         activityDao.setDataById(id, a -> a.setDescr("!!!fake activity!!!"));
-        assertEquals("!!!fake activity!!!", activityDao.findActivityById(id).getDescr());
+        activityDao.setDataById(id, a -> a.setType(ActivityType.BASKETBALL));
+
+        assertThat(activityDao.findActivityById(id))
+                .hasToString("Activity{id=1, startTime=2020-10-10T10:10, descr='!!!fake activity!!!', type=BASKETBALL}");
+
     }
 
     @Test
