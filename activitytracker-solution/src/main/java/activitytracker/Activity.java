@@ -8,7 +8,8 @@ import java.time.LocalDateTime;
 public class Activity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(generator = "act_gen")
+    @TableGenerator(name = "act_gen", table = "act_id_gen", pkColumnName = "id_gen", valueColumnName = "id_val")
     private Long id;
 
     @Column(name = "start_time", nullable = false)
