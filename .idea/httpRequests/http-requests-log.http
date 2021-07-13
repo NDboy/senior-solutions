@@ -1,3 +1,31 @@
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-13T140934.400.json
+
+###
+
+POST http://localhost:8080/api/locations
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Bogota",
+  "lat": "-15.12144",
+  "lon": "-28.121244"
+}
+
+<> 2021-07-13T140927.201.json
+
+###
+
 DELETE http://localhost:8080/api/locations/3
 
 <> 2021-07-05T132624.404.json
@@ -456,32 +484,6 @@ GET http://localhost:8080/api/locations
 Accept: application/json
 
 <> 2021-07-05T000833.200.json
-
-###
-
-POST http://localhost:8080/api/locations
-Content-Type: application/json
-Accept: application/json
-
-{
-  "name": "Bogota",
-  "lat": -15.12144,
-  "lon": -28.121244
-}
-
-###
-
-POST http://localhost:8080/api/locations
-Content-Type: application/json
-Accept: application/json
-
-{
-  "name": "Bogota",
-  "lat": -15.12144,
-  "lon": -28.121244
-}
-
-<> 2021-07-05T000421.500.json
 
 ###
 

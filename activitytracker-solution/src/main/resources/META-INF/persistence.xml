@@ -16,6 +16,8 @@
                       value="org.hibernate.dialect.MariaDB10Dialect"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+<!--            <property name="javax.persistence.schema-generation.scripts.action" value="create"/>-->
+<!--            <property name="javax.persistence.schema-generation.scripts.create-target" value="file:///c:/training/senior-solutions/create.ddl"/>-->
         </properties>
     </persistence-unit>
 </persistence>

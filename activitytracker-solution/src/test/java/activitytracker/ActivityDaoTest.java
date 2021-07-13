@@ -27,20 +27,20 @@ class ActivityDaoTest {
     @BeforeEach
     void setUp() {
 
-        MariaDbDataSource dataSource;
-        try {
-            dataSource = new MariaDbDataSource();
-            dataSource.setUrl("jdbc:mariadb://localhost:3306/activitytracker?useUnicode=true");
-            dataSource.setUser("activitytracker");
-            dataSource.setPassword("activitytracker");
-
-        } catch (SQLException se) {
-            throw new IllegalStateException("Can not create data source", se);
-        }
-
-        Flyway flyway = Flyway.configure().locations("/db/migration/activitytracker").dataSource(dataSource).load();
-        flyway.clean();
-        flyway.migrate();
+//        MariaDbDataSource dataSource;
+//        try {
+//            dataSource = new MariaDbDataSource();
+//            dataSource.setUrl("jdbc:mariadb://localhost:3306/activitytracker?useUnicode=true");
+//            dataSource.setUser("activitytracker");
+//            dataSource.setPassword("activitytracker");
+//
+//        } catch (SQLException se) {
+//            throw new IllegalStateException("Can not create data source", se);
+//        }
+//
+//        Flyway flyway = Flyway.configure().locations("/db/migration/activitytracker").dataSource(dataSource).load();
+//        flyway.clean();
+//        flyway.migrate();
 
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("pu");
         activityDao = new ActivityDao(factory);
