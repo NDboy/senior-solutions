@@ -108,4 +108,17 @@ class ActivityDaoTest {
                 .contains(2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L, 10L)
                 .doesNotContain(1L);
     }
+
+    @Test
+    void testFindActivityWithLabels() {
+        Activity activity = activitySingle;
+        activity.setLabels(List.of("label01", "label02"));
+        activityDao.saveActivity(activity);
+
+        Activity foundActivity = activityDao.findActivityByIdWithLabels(activity.getId());
+
+        assertThat(foundActivity.getLabels())
+                .hasSize(2)
+                .contains("label01", "label02");
+    }
 }
