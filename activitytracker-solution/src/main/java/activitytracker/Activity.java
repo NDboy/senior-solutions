@@ -22,10 +22,23 @@ public class Activity {
     @Enumerated(EnumType.STRING)
     private ActivityType type;
 
+
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
+
     public Activity(LocalDateTime startTime, String descr, ActivityType type) {
         this.startTime = startTime;
         this.descr = descr;
         this.type = type;
+    }
+
+    public Activity(LocalDateTime startTime, String descr, ActivityType type, LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this.startTime = startTime;
+        this.descr = descr;
+        this.type = type;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public Activity(String descr) {
@@ -33,6 +46,16 @@ public class Activity {
     }
 
     public Activity() {
+    }
+
+    @PrePersist
+    public void initCreationTime() {
+        createdAt = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    public void initUpdateTime() {
+        updatedAt = LocalDateTime.now();
     }
 
     public Long getId() {
@@ -65,6 +88,22 @@ public class Activity {
 
     public void setType(ActivityType type) {
         this.type = type;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
