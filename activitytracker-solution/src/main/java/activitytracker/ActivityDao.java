@@ -103,7 +103,12 @@ public class ActivityDao {
                 .setMaxResults(max)
                 .getResultList();
         return coordinates;
+    }
 
+    List<Object[]> findTrackPointCountByActivity(){
+        EntityManager manager = entityManagerFactory.createEntityManager();
+        return manager.createNamedQuery("findTrackPointCountByActivity")
+                .getResultList();
     }
 
 }

@@ -12,6 +12,7 @@ import java.awt.geom.Arc2D;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -135,7 +136,39 @@ class ActivityDaoTest {
 
         assertThat(selectedCoordinates)
                 .hasSize(3)
-                .hasToString("[Coordinate{lat=48.312099999999994, lon=37.2911}, Coordinate{lat=48.3221, lon=37.301100000000005}, Coordinate{lat=48.3321, lon=37.3111}]");
+                .hasToString("[Coordinate{lat=48.312099999999994, lon=37.2911}, " +
+                        "Coordinate{lat=48.3221, lon=37.301100000000005}, " +
+                        "Coordinate{lat=48.3321, lon=37.3111}]");
+    }
+
+    @Test
+    void testCountTrackPointsGroupingByDescription() {
+        Activity zeroActivity = new Activity(LocalDateTime.of(2020,10, 12, 12, 12), "zero activity", ActivityType.HIKING);
+        Activity firstActivity = new Activity(LocalDateTime.of(2020,10, 10, 10, 10), "first activity", ActivityType.HIKING);
+        Activity secondActivity = new Activity(LocalDateTime.of(2020,10, 11, 11, 11), "second activity", ActivityType.BIKING);
+        activityDao.saveActivity(zeroActivity);
+        long id0 = zeroActivity.getId();
+        activityDao.saveActivity(firstActivity);
+        long id1 = firstActivity.getId();
+        activityDao.saveActivity(secondActivity);
+        long id2 = secondActivity.getId();
+
+        IntStream.range(0,3).mapToObj(i -> new TrackPoint())
+                .forEach(t -> activityDao.saveTrackPointToActivity(id0, t));
+
+        IntStream.range(0,4).mapToObj(i -> new TrackPoint())
+                .forEach(t -> activityDao.saveTrackPointToActivity(id1, t));
+
+        IntStream.range(0,8).mapToObj(i -> new TrackPoint())
+                .forEach(t -> activityDao.saveTrackPointToActivity(id2, t));
+
+        List<Object[]> objects = activityDao.findTrackPointCountByActivity();
+
+        assertEquals(3, objects.size());
+        assertEquals("first activity", objects.get(0)[0]);
+        assertEquals(4L, objects.get(0)[1]);
+        assertEquals("second activity", objects.get(1)[0]);
+        assertEquals(8L, objects.get(1)[1]);
 
 
     }

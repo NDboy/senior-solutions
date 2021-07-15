@@ -7,8 +7,9 @@ import java.util.List;
 
 @Entity
 @Table(name = "activities")
-@NamedQuery(name = "findTrackPointCoordinatesByDate", query = "select new activitytracker.Coordinate(a.lat, a.lon) from Activity a where startTime > :startTime")
-
+@NamedQuery(name = "findTrackPointCoordinatesByDate", query = "select new activitytracker.Coordinate(a.lat, a.lon) " +
+                                                            "from Activity a where startTime > :startTime")
+@NamedQuery(name = "findTrackPointCountByActivity", query = "select a.descr, count(t) from Activity a join a.trackPoints t group by a.descr order by a.descr")
 public class Activity {
 
     @Id
