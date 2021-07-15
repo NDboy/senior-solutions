@@ -3,6 +3,7 @@ package activitytracker;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -94,6 +95,15 @@ public class ActivityDao {
         return foundActivity;
     }
 
+    List<Coordinate> findTrackPointCoordinatesByDate(LocalDateTime afterThis, int start, int max) {
+        EntityManager manager = entityManagerFactory.createEntityManager();
+        List<Coordinate> coordinates = manager.createNamedQuery("findTrackPointCoordinatesByDate", Coordinate.class)
+                .setParameter("startTime", afterThis)
+                .setFirstResult(start)
+                .setMaxResults(max)
+                .getResultList();
+        return coordinates;
 
+    }
 
 }

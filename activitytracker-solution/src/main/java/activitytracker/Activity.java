@@ -7,6 +7,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "activities")
+@NamedQuery(name = "findTrackPointCoordinatesByDate", query = "select new activitytracker.Coordinate(a.lat, a.lon) from Activity a where startTime > :startTime")
+
 public class Activity {
 
     @Id
@@ -20,10 +22,13 @@ public class Activity {
     @Column(name = "act_desc", nullable = false, length = 200)
     private String descr;
 
-    @Column(name = "act_type", nullable = false, length = 20)
+    @Column(name = "act_type",/* nullable = false, */length = 20)
     @Enumerated(EnumType.STRING)
     private ActivityType type;
 
+    private double lat;
+
+    private double lon;
 
     private LocalDateTime createdAt;
 
@@ -61,6 +66,13 @@ public class Activity {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
         this.labels = labels;
+    }
+
+    public Activity(LocalDateTime startTime, String descr, double lat, double lon) {
+        this.startTime = startTime;
+        this.descr = descr;
+        this.lat = lat;
+        this.lon = lon;
     }
 
     public Activity(String descr) {
@@ -158,6 +170,22 @@ public class Activity {
 
     public void setTrackPoints(List<TrackPoint> trackPoints) {
         this.trackPoints = trackPoints;
+    }
+
+    public double getLat() {
+        return lat;
+    }
+
+    public void setLat(double lat) {
+        this.lat = lat;
+    }
+
+    public double getLon() {
+        return lon;
+    }
+
+    public void setLon(double lon) {
+        this.lon = lon;
     }
 
     @Override

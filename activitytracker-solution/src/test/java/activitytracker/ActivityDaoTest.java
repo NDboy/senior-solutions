@@ -8,6 +8,7 @@ import org.mariadb.jdbc.MariaDbDataSource;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import java.awt.geom.Arc2D;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -120,5 +121,22 @@ class ActivityDaoTest {
         assertThat(foundActivity.getLabels())
                 .hasSize(2)
                 .contains("label01", "label02");
+    }
+
+    @Test
+    void testNamedQueryWithPaging() {
+        IntStream.range(0,400)
+                .mapToObj(i -> new Activity(LocalDateTime.of(2010,1,1,9, 5).plusDays(i),
+                                        "" + i + ". activity",
+                                        47.0121 + (double)i/100,
+                                        35.9911 + (double)i/100))
+                .forEach(a -> activityDao.saveActivity(a));
+        List<Coordinate> selectedCoordinates = activityDao.findTrackPointCoordinatesByDate(LocalDateTime.of(2010,5,1,1,1),10,3);
+
+        assertThat(selectedCoordinates)
+                .hasSize(3)
+                .hasToString("[Coordinate{lat=48.312099999999994, lon=37.2911}, Coordinate{lat=48.3221, lon=37.301100000000005}, Coordinate{lat=48.3321, lon=37.3111}]");
+
+
     }
 }
