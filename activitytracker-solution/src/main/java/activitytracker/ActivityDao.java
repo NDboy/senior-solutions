@@ -72,4 +72,28 @@ public class ActivityDao {
         manager.close();
         return activity;
     }
+
+    public void saveTrackPointToActivity(long activityId, TrackPoint trackPoint) {
+        EntityManager manager = entityManagerFactory.createEntityManager();
+        manager.getTransaction().begin();
+        Activity activity = manager.find(Activity.class, activityId);
+
+        trackPoint.setActivity(activity);
+        manager.persist(trackPoint);
+        manager.getTransaction().commit();
+        manager.close();
+
+    }
+
+    public Activity findActivityByIdWithTrackPoints(long activityId) {
+        EntityManager manager = entityManagerFactory.createEntityManager();
+        Activity foundActivity = manager.createQuery("select a from Activity a join fetch a.trackPoints where a.id = :id", Activity.class)
+                .setParameter("id", activityId)
+                .getSingleResult();
+        manager.close();
+        return foundActivity;
+    }
+
+
+
 }

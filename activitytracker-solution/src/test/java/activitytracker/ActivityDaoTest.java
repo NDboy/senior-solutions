@@ -74,7 +74,7 @@ class ActivityDaoTest {
         activities.forEach(activityDao::saveActivity);
         List<Activity> foundActivities = activityDao.listActivities();
 
-        assertThat(activities)
+        assertThat(foundActivities)
                 .hasSize(10)
                 .extracting("id", "startTime", "descr", "type")
                 .contains(tuple(1L, LocalDateTime.of(2020,10, 10, 10, 10), "This was my 0. activity.", ActivityType.RUNNING),
