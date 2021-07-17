@@ -170,6 +170,5 @@ class ActivityDaoTest {
         assertEquals("second activity", objects.get(1)[0]);
         assertEquals(8L, objects.get(1)[1]);
 
-
     }
 }

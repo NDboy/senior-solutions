@@ -53,7 +53,7 @@ public class LocationService {
     }
 
     public LocationDto createLocation(CreateLocationCommand command) {
-        Location location = new Location(atomicLong.incrementAndGet(), command.getName(), command.getLat(), command.getLon());
+        Location location = new Location(atomicLong.incrementAndGet(), command.getName(), command.getLat(), command.getLon()/*, command.getTime()*/);
         locations.add(location);
         return modelMapper.map(location, LocationDto.class);
     }

@@ -12,7 +12,8 @@ Accept: application/json
 {
   "name": "Bogota",
   "lat": "-15.12144",
-  "lon": "-28.121244"
+  "lon": "-28.121244",
+  "time": "2042-03-01T10:23:12"
 }
 
 ###
