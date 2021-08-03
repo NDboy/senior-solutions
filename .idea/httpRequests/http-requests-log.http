@@ -1,750 +1,576 @@
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2032-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T181259.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2052-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T181251.200.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01 01:00:00",
-       "endTime": "2052-03-01 13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T181239.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2052-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T181209.200.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2032-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T175946.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2052-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2032-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T175511.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2032-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T175312.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2012-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T175246.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2012-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "0123456789",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234567890",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T173730.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234567890",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "003"
-}
-
-<> 2021-07-17T173717.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234567890",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "003"
-}
-
-<> 2021-07-17T173508.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234567890",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-<> 2021-07-17T173336.400.json
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234567890",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-POST http://localhost:8080/api/appointments
-Content-Type: application/json
-
-{
-  "taxId": "1234",
-  "intervall":
-     {
-       "startTime": "2042-02-01T01:00:00",
-       "endTime": "2042-03-01T13:23:12"
-     },
-  "typeCode": "002"
-}
-
-###
-
-GET http://localhost:8080/api/types
-
-###
-
-GET http://localhost:8080/api/types
-
-<> 2021-07-17T162800.200.json
-
-###
-
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01T10:23:12"
+  "rating": 3
 }
 
-<> 2021-07-17T152637.201.json
+<> 2021-08-03T203728.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01T10:23:12"
+  "rating": 3
 }
 
-<> 2021-07-17T142639.201.json
+<> 2021-08-03T203723.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 3
 }
 
-<> 2021-07-17T142629.400.json
+<> 2021-08-03T203720.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 7
 }
 
-<> 2021-07-17T142530.201.json
+<> 2021-08-03T203711.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 7
 }
 
-<> 2021-07-17T142528.201.json
+<> 2021-08-03T203706.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 7
 }
+
+<> 2021-08-03T203702.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 7
 }
 
-<> 2021-07-17T135244.201.json
+<> 2021-08-03T203658.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01T10:23:12"
+  "rating": 9
 }
 
-<> 2021-07-17T135238.400.json
+<> 2021-08-03T203651.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 9
 }
 
-<> 2021-07-17T133800.201.json
+<> 2021-08-03T203647.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 9
 }
 
-<> 2021-07-17T133357.201.json
+<> 2021-08-03T203642.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 9
 }
 
-<> 2021-07-17T133322.201.json
+<> 2021-08-03T203637.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 1
 }
+
+<> 2021-08-03T203630.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 1
 }
 
-<> 2021-07-17T133239.201.json
+<> 2021-08-03T203626.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T203623.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T203621.200.json
+
+###
+
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 1
 }
 
-<> 2021-07-17T133215.400.json
+<> 2021-08-03T203440.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 9
 }
 
-<> 2021-07-17T133146.400.json
+<> 2021-08-03T203427.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 1
 }
 
-<> 2021-07-17T133043.201.json
+<> 2021-08-03T203418.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T203415.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T203412.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T203409.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T203405.200.json
+
+###
+
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 1
 }
 
-<> 2021-07-17T133003.201.json
+<> 2021-08-03T203109.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01 10:23:12"
+  "rating": 1
 }
 
-<> 2021-07-17T132915.201.json
+<> 2021-08-03T203105.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01T10:23:12"
+  "rating": 9
 }
 
-<> 2021-07-17T132816.400.json
+<> 2021-08-03T203056.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T203046.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T203037.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T203036.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T202926.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T202922.200.json
+
+###
+
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01T10:23:12"
+  "rating": 1
 }
 
-<> 2021-07-17T132729.400.json
+<> 2021-08-03T201557.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01T10:23:12"
+  "rating": 1
 }
 
-<> 2021-07-17T132240.400.json
+<> 2021-08-03T201553.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01T10:23:12"
+  "rating": 9
 }
 
-<> 2021-07-17T132206.400.json
+<> 2021-08-03T201544.200.json
 
 ###
 
-POST http://localhost:8080/api/locations
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T201540.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T201536.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T201533.200.json
+
+###
+
+POST http://localhost:8080/api/movies/2/rating
 Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "Bogota",
-  "lat": "-15.12144",
-  "lon": "-28.121244",
-  "time": "2042-03-01T10:23:12"
+  "rating": 9
 }
 
-<> 2021-07-17T132202.400.json
+<> 2021-08-03T201435.200.json
+
+###
+
+POST http://localhost:8080/api/movies/2/rating
+Content-Type: application/json
+Accept: application/json
+
+{
+  "rating": 9
+}
+
+<> 2021-08-03T201430.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T201401.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T201355.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T201353.200.json
+
+###
+
+POST http://localhost:8080/api/movies/2/rating
+Content-Type: application/json
+Accept: application/json
+
+{
+  "rating": 9
+}
+
+<> 2021-08-03T200923.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T200845.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T200841.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T200838.200.json
+
+###
+
+POST http://localhost:8080/api/movies/2/rating
+Content-Type: application/json
+Accept: application/json
+
+{
+  "rating": 9
+}
+
+<> 2021-08-03T200500.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T200457.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T200454.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T200344.200.json
+
+###
+
+POST http://localhost:8080/api/movies
+Content-Type: application/json
+
+{
+  "title": "Cafe De Flore"
+}
+
+<> 2021-08-03T200343.200.json
 
 ###
 
